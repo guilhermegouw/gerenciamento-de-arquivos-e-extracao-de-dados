@@ -117,16 +117,15 @@ curl -X GET "http://127.0.0.1:8000/files/users_range_messages/input/10/100"
 
 1. Clone o repositório:
 ```
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/guilhermegouw/gerenciamento-de-arquivos-e-extracao-de-dados 
+cd gerenciamento-de-arquivos-e-extracao-de-dados
 ```
 
 2. Configure as variáveis de ambiente no arquivo .env:
 ```
-SECRET_KEY=your-production-secret-key
-DEBUG=False
-ALLOWED_HOSTS=127.0.0.1,localhost
+cp env-sample .env
 ```
+Substitua as variáveis de ambiente com os valores de sua escolha.
 
 3. Construa as imagens Docker:
 ```
