@@ -145,6 +145,13 @@ Para rodar o ambiente de desenvolvimento e executar testes:
 docker-compose up web-dev
 ```
 
+### Executar Testes
+Para rodar os testes, utilize o seguinte comando:
+
+```
+docker-compose run web-dev pytest
+```
+
 ### Limpeza
 Para parar e remover os contêineres e imagens:
 
