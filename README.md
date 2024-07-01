@@ -1,11 +1,62 @@
 # API para Upload e Manipulação de arquivos de texto.
 
 ## Descrição
-Esta API permite o upload e a manipulação de arquivos de texto, oferecendo endpoints para listar arquivos, 
-recuperar informações específicas sobre usuários com maior ou menor tamanho de mensagem, 
-listar usuários ordenados por nome e listar usuários dentro de um intervalo de mensagens.
-A API é construída com Django e Django REST Framework.
+Esta API construída com Django e Django REST Framework permite upload e a manipulação 
+arquivos de texto, oferecendo endpoints para listar arquivos, recuperar informações 
+específicas sobre o conteúdo dos arquivos, como dados dos usuários e aplicação de 
+diferentes filtros.
 
+## Instalação e Configuração
+
+### Requisitos
+- Docker
+- Docker Compose
+
+### Passos de Instalação
+
+1. Clone o repositório:
+```
+git clone https://github.com/guilhermegouw/gerenciamento-de-arquivos-e-extracao-de-dados 
+cd gerenciamento-de-arquivos-e-extracao-de-dados
+```
+
+2. Configure as variáveis de ambiente no arquivo .env:
+```
+cp env-sample .env
+```
+Substitua as variáveis de ambiente com os valores de sua escolha.
+
+3. Construa as imagens Docker:
+```
+docker-compose build
+```
+
+4. Inicie os contêineres:
+```
+docker-compose up web
+```
+A aplicação estará disponível em `http://127.0.0.1:8000/`.
+
+### Desenvolvimento e Testes
+Para rodar o ambiente de desenvolvimento e executar testes:
+
+```
+docker-compose up web-dev
+```
+
+### Executar Testes
+Para rodar os testes, utilize o seguinte comando:
+
+```
+docker-compose run web-dev pytest
+```
+
+### Limpeza
+Para parar e remover os contêineres e imagens:
+
+```
+docker-compose down --rmi all --volumes --remove-orphans
+```
 ## Endpoints
 ### Upload de Arquivos
 
@@ -107,54 +158,3 @@ Exemplo de requisição usando curl:
 curl -X GET "http://127.0.0.1:8000/files/users_range_messages/input/10/100/"
 ```
 
-## Instalação e Configuração
-
-### Requisitos
-- Docker
-- Docker Compose
-
-### Passos de Instalação
-
-1. Clone o repositório:
-```
-git clone https://github.com/guilhermegouw/gerenciamento-de-arquivos-e-extracao-de-dados 
-cd gerenciamento-de-arquivos-e-extracao-de-dados
-```
-
-2. Configure as variáveis de ambiente no arquivo .env:
-```
-cp env-sample .env
-```
-Substitua as variáveis de ambiente com os valores de sua escolha.
-
-3. Construa as imagens Docker:
-```
-docker-compose build
-```
-
-4. Inicie os contêineres:
-```
-docker-compose up web
-```
-A aplicação estará disponível em `http://127.0.0.1:8000/`.
-
-### Desenvolvimento e Testes
-Para rodar o ambiente de desenvolvimento e executar testes:
-
-```
-docker-compose up web-dev
-```
-
-### Executar Testes
-Para rodar os testes, utilize o seguinte comando:
-
-```
-docker-compose run web-dev pytest
-```
-
-### Limpeza
-Para parar e remover os contêineres e imagens:
-
-```
-docker-compose down --rmi all --volumes --remove-orphans
-```
