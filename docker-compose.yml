@@ -11,7 +11,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DEBUG=1
+      - DEBUG=0
     env_file:
         - .env
 
@@ -19,9 +19,7 @@ services:
     build:
       context: .
       target: development
-    command: pytest
-    volumes:
-      - .:/usr/src/app
+    command: python manage.py runserver 0.0.0.0:8000
     ports:
       - "8000:8000"
     environment:
