@@ -47,7 +47,7 @@ curl -X GET "http://127.0.0.1:8000/files/"
 Exemplo de requisição usando curl:
 
 ```
-curl -X GET "http://127.0.0.1:8000/files/user_max_size/input"
+curl -X GET "http://127.0.0.1:8000/files/user_max_size/input/"
 ```
 
 ### Usuário com Menor Tamanho
@@ -62,7 +62,7 @@ curl -X GET "http://127.0.0.1:8000/files/user_max_size/input"
 
 Exemplo de requisição usando curl:
 ```
-curl -X GET "http://127.0.0.1:8000/files/user_min_size/input"
+curl -X GET "http://127.0.0.1:8000/files/user_min_size/input/"
 ```
 
 ### Listagem de Usuários Ordenados por Nome
@@ -76,7 +76,7 @@ curl -X GET "http://127.0.0.1:8000/files/user_min_size/input"
 
 Exemplo de requisição usando curl:
 ```
-curl -X GET "http://127.0.0.1:8000/files/users/input"
+curl -X GET "http://127.0.0.1:8000/files/users/input/"
 ```
 
 ### Listagem de Usuários Ordenados por Nome (Ordem Decrescente)
@@ -90,7 +90,7 @@ curl -X GET "http://127.0.0.1:8000/files/users/input"
 
 Exemplo de requisição usando curl:
 ```
-curl -X GET "http://127.0.0.1:8000/files/users_desc/input"
+curl -X GET "http://127.0.0.1:8000/files/users_desc/input/"
 ```
 
 ### Listagem de Usuários por Intervalo de Mensagens
@@ -104,7 +104,7 @@ curl -X GET "http://127.0.0.1:8000/files/users_desc/input"
 
 Exemplo de requisição usando curl:
 ```
-curl -X GET "http://127.0.0.1:8000/files/users_range_messages/input/10/100"
+curl -X GET "http://127.0.0.1:8000/files/users_range_messages/input/10/100/"
 ```
 
 ## Instalação e Configuração
